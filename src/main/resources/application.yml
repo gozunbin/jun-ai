@@ -1,8 +1,14 @@
 spring:
   application:
     name: jun-ai
+  # mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jun_ai
+    username: root
+    password: root
 server:
-  port: 8123
+  port: 8110
   servlet:
     context-path: /api
 # springdoc-openapi
@@ -15,3 +21,4 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
+
