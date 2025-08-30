@@ -1,9 +1,12 @@
-package com.jun.junai.model.dto.user;
+package com.jun.junai.model.dto;
 
 import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 用户登录
+ */
 @Data
 public class UserLoginRequest implements Serializable {
 

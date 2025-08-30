@@ -2,6 +2,9 @@ package com.jun.junai.common;
 
 import com.jun.junai.exception.ErrorCode;
 
+/**
+ * 快速构造响应结果的工具类
+ */
 public class ResultUtils {
 
     /**

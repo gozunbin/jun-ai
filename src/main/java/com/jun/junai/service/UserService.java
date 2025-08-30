@@ -1,21 +1,20 @@
 package com.jun.junai.service;
 
-import com.jun.junai.model.dto.user.UserQueryRequest;
-import com.jun.junai.model.vo.LoginUserVO;
-import com.jun.junai.model.vo.UserVO;
 import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
+import com.jun.junai.model.dto.UserQueryRequest;
 import com.jun.junai.model.entity.User;
+import com.jun.junai.model.vo.LoginUserVO;
+import com.jun.junai.model.vo.UserVO;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
 
 /**
  * 用户 服务层。
- *
- * @author 俊哥
  */
 public interface UserService extends IService<User> {
+
     /**
      * 用户注册
      *
@@ -25,13 +24,6 @@ public interface UserService extends IService<User> {
      * @return 新用户 id
      */
     long userRegister(String userAccount, String userPassword, String checkPassword);
-
-    /**
-     * 获取加密密码
-     * @param userPassword 用户密码
-     * @return
-     */
-    String getEncryptPassword(String userPassword);
 
     /**
      * 获取脱敏的已登录用户信息
@@ -59,31 +51,42 @@ public interface UserService extends IService<User> {
     User getLoginUser(HttpServletRequest request);
 
     /**
-     * 用户注销
+     * 获取脱敏后的用户信息
      *
-     * @param request
-     * @return
-     */
-    boolean userLogout(HttpServletRequest request);
-
-    /**
-     * 获取用户vo
-     * @param user
+     * @param user 用户信息
      * @return
      */
     UserVO getUserVO(User user);
 
     /**
-     * 获取用户vo列表
-     * @param userList
+     * 获取脱敏后的用户信息（分页）
+     *
+     * @param userList 用户列表
      * @return
      */
     List<UserVO> getUserVOList(List<User> userList);
 
     /**
-     * 查询包装
+     * 用户注销
+     *
+     * @param request
+     * @return 退出登录是否成功
+     */
+    boolean userLogout(HttpServletRequest request);
+
+    /**
+     * 根据查询条件构造数据查询参数
+     *
      * @param userQueryRequest
      * @return
      */
     QueryWrapper getQueryWrapper(UserQueryRequest userQueryRequest);
+
+    /**
+     * 加密
+     *
+     * @param userPassword 用户密码
+     * @return 加密后的用户密码
+     */
+    String getEncryptPassword(String userPassword);
 }

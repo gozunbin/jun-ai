@@ -1,5 +1,8 @@
 package com.jun.junai.constant;
 
+/**
+ * 用户常量
+ */
 public interface UserConstant {
 
     /**
