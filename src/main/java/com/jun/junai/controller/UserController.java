@@ -1,7 +1,6 @@
 package com.jun.junai.controller;
 
 import cn.hutool.core.bean.BeanUtil;
-import com.mybatisflex.core.paginate.Page;
 import com.jun.junai.annotation.AuthCheck;
 import com.jun.junai.common.BaseResponse;
 import com.jun.junai.common.DeleteRequest;
@@ -10,11 +9,12 @@ import com.jun.junai.constant.UserConstant;
 import com.jun.junai.exception.BusinessException;
 import com.jun.junai.exception.ErrorCode;
 import com.jun.junai.exception.ThrowUtils;
-import com.jun.junai.model.dto.*;
+import com.jun.junai.model.dto.user.*;
 import com.jun.junai.model.entity.User;
 import com.jun.junai.model.vo.LoginUserVO;
 import com.jun.junai.model.vo.UserVO;
 import com.jun.junai.service.UserService;
+import com.mybatisflex.core.paginate.Page;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;

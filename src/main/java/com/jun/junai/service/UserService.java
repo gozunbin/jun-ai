@@ -1,11 +1,11 @@
 package com.jun.junai.service;
 
-import com.mybatisflex.core.query.QueryWrapper;
-import com.mybatisflex.core.service.IService;
-import com.jun.junai.model.dto.UserQueryRequest;
+import com.jun.junai.model.dto.user.UserQueryRequest;
 import com.jun.junai.model.entity.User;
 import com.jun.junai.model.vo.LoginUserVO;
 import com.jun.junai.model.vo.UserVO;
+import com.mybatisflex.core.query.QueryWrapper;
+import com.mybatisflex.core.service.IService;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
